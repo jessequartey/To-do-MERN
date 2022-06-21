@@ -1,10 +1,13 @@
+//import mongoose to create mongoose model
 const mongoose = require('mongoose');
 
-const TodoItemsSchema = new mongoose.Schema({
-    item: {
-        type: String,
-        required: true
-    }
+//create Schema
+const TodoItemSchema = new mongoose.Schema({
+  item:{
+    type:String,
+    required: true
+  }
 })
 
-module.exports = mongoose.model('todo', TodoItemsSchema);
+//export this Schema
+module.exports = mongoose.model('todo', TodoItemSchema);
